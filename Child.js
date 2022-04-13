@@ -4,7 +4,9 @@ import { useToast } from './Toast';
 export const Child = () => {
   const toast = useToast();
   const showToast = () =>
-    toast.open(`Toast created from child component! ${Math.random() * 2332}`);
+    toast.open(`Toast created from child component! ${Math.random() * 2332}`, {
+      autoHideDuration: 2000,
+    });
 
   return (
     <div style={{ border: '1px solid blue', padding: '8px' }}>
